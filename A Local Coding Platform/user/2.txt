@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+long gcd(long a, long b)  
+{  
+    if (a == 0 || b == 0)  
+        return 0;  
+    if (a == b)  
+        return a;  
+    if (a > b)  
+        return gcd(a-b, b);  
+    return gcd(a, b-a);  
+}  
+long lcm(long a,long b)  
+{  
+    return (a*b)/gcd(a, b);  
+}  
+int main() {
+	long t;
+	cin>>t;
+	while(t--)
+	{
+	    long l;
+	    long x,y,n,m;
+	    cin>>x>>y>>n>>m;
+	    l = lcm(x,y);
+	    if(x*n >=l && y*m>=l){
+	        cout<<"YES"<<endl;
+	    }else{
+	        cout<<"NO"<<endl;
+	    }
+	}
+	return 0;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        long p1,p2,k;
+        cin>>p1>>p2>>k;
+        int rem;
+        rem = (p1+p2)%(2*k);
+        //cout<<rem<<endl;
+        if(rem < k){
+            cout<<"CHEF"<<endl;
+        }else{
+            cout<<"COOK"<<endl;
+        }
+    }
+	return 0;
+}
